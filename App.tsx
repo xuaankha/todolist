@@ -7,11 +7,17 @@
 
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
+import {fontFamilies} from './src/constants/fontFamilies';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={{color: '#fafafa', fontSize: 18}}>
+      <Text
+        style={{
+          color: '#fafafa',
+          fontSize: 18,
+          fontFamily: fontFamilies.regular,
+        }}>
         Welcome to my todo list
       </Text>
       <Text style={styles.title}>Todo List</Text>
@@ -28,7 +34,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    fontWeight: '700',
+    fontFamily: fontFamilies.bold,
     fontSize: 22,
     color: '#fff',
   },
