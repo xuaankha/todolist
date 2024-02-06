@@ -18,6 +18,8 @@ import {
 } from 'iconsax-react-native';
 import TagComponent from '../components/TagComponent';
 
+import CircularComponent from '../components/CircularComponent';
+
 const HomeScreen = () => {
   return (
     <Container>
@@ -53,7 +55,7 @@ const HomeScreen = () => {
               </RowComponent>
             </View>
             <View>
-              <TextComponent text="Circle" />
+              <CircularComponent value={80} />
             </View>
           </RowComponent>
         </CardComponent>
