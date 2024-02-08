@@ -11,6 +11,7 @@ import TitleComponent from '../components/TitleComponent';
 import {colors} from '../constants/colors';
 import CardComponent from '../components/CardComponent';
 import {
+  Edit2,
   Element3,
   Element4,
   Notification,
@@ -19,6 +20,9 @@ import {
 import TagComponent from '../components/TagComponent';
 
 import CircularComponent from '../components/CircularComponent';
+import SpaceComponent from '../components/SpaceComponent';
+import CardImageComponent from '../components/CardImageComponent';
+import AvatarGroup from '../components/AvatarGroup';
 
 const HomeScreen = () => {
   return (
@@ -55,10 +59,54 @@ const HomeScreen = () => {
               </RowComponent>
             </View>
             <View>
-              <CircularComponent value={80} />
+              <CircularComponent value={40} />
             </View>
           </RowComponent>
         </CardComponent>
+      </SectionComponent>
+      <SectionComponent>
+        <RowComponent styles={{alignItems: 'flex-start'}}>
+          <View style={{flex: 1}}>
+            <CardImageComponent>
+              <TouchableOpacity
+                onPress={() => {}}
+                style={globalStyles.iconContainer}>
+                <Edit2 size={20} color={colors.white} />
+              </TouchableOpacity>
+              <TitleComponent text="UX Design" />
+              <TextComponent text="Task manager mobile app" size={13} />
+              <View style={{marginVertical: 28}}>
+                <AvatarGroup />
+              </View>
+              <TextComponent
+                text="Due, 2023 - 12"
+                size={12}
+                color={colors.desc}
+              />
+            </CardImageComponent>
+          </View>
+          <SpaceComponent width={16} />
+          <View style={{flex: 1}}>
+            <CardImageComponent color="rgba(33,150,243,0.9)">
+              <TouchableOpacity
+                onPress={() => {}}
+                style={globalStyles.iconContainer}>
+                <Edit2 size={20} color={colors.white} />
+              </TouchableOpacity>
+              <TitleComponent text="API Payment" />
+            </CardImageComponent>
+            <SpaceComponent height={16} />
+            <CardImageComponent color="rgba(18,181,22,0.9)">
+              <TouchableOpacity
+                onPress={() => {}}
+                style={globalStyles.iconContainer}>
+                <Edit2 size={20} color={colors.white} />
+              </TouchableOpacity>
+              <TitleComponent text="Update work" />
+              <TextComponent text="Revision home page" size={13} />
+            </CardImageComponent>
+          </View>
+        </RowComponent>
       </SectionComponent>
     </Container>
   );
