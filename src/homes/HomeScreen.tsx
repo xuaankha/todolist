@@ -23,6 +23,7 @@ import CircularComponent from '../components/CircularComponent';
 import SpaceComponent from '../components/SpaceComponent';
 import CardImageComponent from '../components/CardImageComponent';
 import AvatarGroup from '../components/AvatarGroup';
+import ProgressBarComponent from '../components/ProgressBarComponent';
 
 const HomeScreen = () => {
   return (
@@ -77,6 +78,11 @@ const HomeScreen = () => {
               <TextComponent text="Task manager mobile app" size={13} />
               <View style={{marginVertical: 28}}>
                 <AvatarGroup />
+                <ProgressBarComponent
+                  percent="70%"
+                  color="#0AACFF"
+                  size="large"
+                />
               </View>
               <TextComponent
                 text="Due, 2023 - 12"
@@ -94,7 +100,10 @@ const HomeScreen = () => {
                 <Edit2 size={20} color={colors.white} />
               </TouchableOpacity>
               <TitleComponent text="API Payment" />
+              <AvatarGroup />
+              <ProgressBarComponent percent="40%" color="#A2F068" />
             </CardImageComponent>
+
             <SpaceComponent height={16} />
             <CardImageComponent color="rgba(18,181,22,0.9)">
               <TouchableOpacity
@@ -107,6 +116,22 @@ const HomeScreen = () => {
             </CardImageComponent>
           </View>
         </RowComponent>
+      </SectionComponent>
+      <SectionComponent>
+        <TextComponent
+          text="Urgent tasks"
+          flex={1}
+          font={fontFamilies.bold}
+          size={21}
+        />
+        <CardComponent>
+          <RowComponent>
+            <CircularComponent value={40} radius={36} />
+            <View style={{flex: 1, justifyContent: 'center', paddingLeft: 12}}>
+              <TextComponent text="Title of task" />
+            </View>
+          </RowComponent>
+        </CardComponent>
       </SectionComponent>
     </Container>
   );
